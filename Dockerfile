@@ -8,6 +8,7 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-EXPOSE 8000
+EXPOSE 8501
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000" , "--reload"]
+ENTRYPOINT ["streamlit","run"]
+CMD ["app.py"]
